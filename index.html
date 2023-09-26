@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contador con Reset</title>
+  </head>
+  <body>
+    <h1>Contador:</h1>
+    <p id="contador">0</p>
+
+    <button onclick="incrementarContador()">Incrementar</button>
+    <button onclick="decrementarContador()">Decrementar</button>
+    <button onclick="resetContador()">Reset</button>
+
+    <script>
+      // Función para incrementar el contador
+      function incrementarContador() {
+        var contadorElement = document.getElementById("contador");
+        var contadorValor = parseInt(contadorElement.textContent);
+        contadorValor++;
+        contadorElement.textContent = contadorValor;
+      }
+
+      // Función para decrementar el contador
+      function decrementarContador() {
+        var contadorElement = document.getElementById("contador");
+        var contadorValor = parseInt(contadorElement.textContent);
+        contadorValor--;
+        contadorElement.textContent = contadorValor;
+      }
+
+      // Función para resetear el contador a 0
+      function resetContador() {
+        var contadorElement = document.getElementById("contador");
+        contadorElement.textContent = "0";
+      }
+    </script>
+  </body>
+</html>
